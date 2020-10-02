@@ -19,5 +19,8 @@ class Dog
     puts @@all.collect { |dog| dog.name }
   end
   
+  def self.clear_all
+    @@all.clear
+  end
   
 end 

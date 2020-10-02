@@ -8,14 +8,20 @@ class Dog
   
   def initialize(name)
     @name = name 
-    @@all << self
+    self.save
   end 
   
   def self.all 
     @@all 
   end 
   
+  def self.save
+    @@all << self
+  end
+  
   def self.print_all
     puts @@all.collect { |dog| dog.name }
   end
+  
+  
 end 
